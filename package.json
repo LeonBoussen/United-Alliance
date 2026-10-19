@@ -1,0 +1,22 @@
+{
+  "name": "united-alliance",
+  "version": "0.1.0",
+  "description": "A multi-agent system: an Overseer that staffs agents across your machines, a helper, a shared board and a web console.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @alliance/web",
+    "start": "npm run build:server -w @alliance/web && npm run start -w @alliance/overseer",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm test --workspaces --if-present"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

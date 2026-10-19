@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Overseer data: database and master key. Never commit these.
+apps/overseer/data/
+
+# Environment
+.env
+.env.*
+!.env.example
+!apps/web/.env.overseer
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Harness runtime files, when a harness is run from the repo
+apps/harness/alliance.json
+apps/harness/.alliance-*
+apps/harness/workspace/
+
+# Logs and OS / editor files
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

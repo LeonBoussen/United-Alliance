@@ -1,0 +1,25 @@
+{
+  "name": "@alliance/overseer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning --import tsx src/supervisor.ts",
+    "dev": "node --disable-warning=ExperimentalWarning --import tsx --watch src/main.ts",
+    "typecheck": "tsc --noEmit -p .",
+    "test": "node --disable-warning=ExperimentalWarning --import tsx --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@alliance/harness-kit": "*",
+    "@alliance/protocol": "*",
+    "fastify": "^5.6.0",
+    "openai": "^6.0.0",
+    "tsx": "^4.19.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/ws": "^8.5.12",
+    "typescript": "^5.6.3"
+  }
+}
